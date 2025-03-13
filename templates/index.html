@@ -1,0 +1,80 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arsenal.ai</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/landing.css') }}">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism-tomorrow.min.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <!-- Add marked.js for markdown parsing -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <!-- Add DOMPurify for HTML sanitization -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/3.0.8/purify.min.js"></script>
+</head>
+<body class="dark-theme">
+    <div id="particles"></div>
+    
+    <!-- Landing Page -->
+    <div class="landing-container" id="landing-page">
+        <div class="floating-icon">
+            <i class="fas fa-robot"></i>
+        </div>
+        <h1 class="landing-title">Arsenal.ai</h1>
+        <p class="landing-subtitle">Your advanced neural assistant powered by Gemini</p>
+        <button id="start-chat" class="start-button">Start Chatting</button>
+    </div>
+    
+    <!-- Main App Container -->
+    <div class="app-container" id="app-container">
+        <div class="container">
+            <header class="chat-header">
+                <div class="header-content">
+                    <h1><i class="fas fa-terminal"></i> Arsenal</h1>
+                    <p class="subtitle">> Neural v1.2 _</p>
+                </div>
+                <div class="header-controls">
+                    <button id="clear-chat" class="control-button" title="Clear Chat">
+                        <i class="fas fa-trash-alt"></i>
+                    </button>
+                    <button id="retry-last" class="control-button" title="Retry Last Response">
+                        <i class="fas fa-redo-alt"></i>
+                    </button>
+                    <button id="theme-toggle" class="theme-toggle">
+                        <i class="fas fa-microchip"></i>
+                    </button>
+                </div>
+            </header>
+
+            <main class="chat-container">
+                <div id="chat-messages" class="chat-messages"></div>
+
+                <div class="chat-input-container">
+                    <textarea 
+                        id="user-input" 
+                        class="chat-input" 
+                        placeholder="> Ask Anything_"
+                        rows="1"
+                    ></textarea>
+                    <button id="send-button" class="send-button">
+                        <i class="fas fa-terminal"></i>
+                    </button>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.2.3/particles.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/components/prism-python.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/components/prism-javascript.min.js"></script>
+    <script src="{{ url_for('static', filename='js/particles-config.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/theme.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/codeEmbed.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/typing-animation.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/landing.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
